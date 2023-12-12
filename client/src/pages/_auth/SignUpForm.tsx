@@ -62,7 +62,7 @@ async function onSubmit(values: z.infer<typeof SignUpValidation>) {
 };
 
   return (
-    <div className="flex flex-col lg:h-screen lg:w-screen items-center bg-cyan-800 p-10 justify-center">
+    <div className="flex flex-col lg:h-screen lg:w-screen items-center p-10 justify-center">
        <Form {...form} >
       <div className="flex justify-center items-center mt-6 flex-col">
         <h1 className="text-6xl text-[#01F9C6] items-center p-2">FriendS</h1>
@@ -77,10 +77,9 @@ async function onSubmit(values: z.infer<typeof SignUpValidation>) {
         name="firstName"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Firstname</FormLabel>
+            <FormLabel>First Name</FormLabel>
             <FormControl>
-              <Input type="text" className="h-10 bg-cyan-700 rounded-full
-              focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3"{...field} />
+              <Input type="text" className="shad-input rounded-full"{...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -91,10 +90,9 @@ async function onSubmit(values: z.infer<typeof SignUpValidation>) {
         name="lastName"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Lastname</FormLabel>
+            <FormLabel>Last Name</FormLabel>
             <FormControl>
-              <Input type="text" className="h-10 bg-cyan-700 rounded-full
-              focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3"{...field} />
+              <Input type="text" className="shad-input rounded-full"{...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -107,7 +105,7 @@ async function onSubmit(values: z.infer<typeof SignUpValidation>) {
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input type="text" className="h-10 bg-cyan-700 rounded-full"{...field} />
+              <Input type="text" className="shad-input rounded-full"{...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -120,7 +118,7 @@ async function onSubmit(values: z.infer<typeof SignUpValidation>) {
           <FormItem>
             <FormLabel>Email</FormLabel>
             <FormControl>
-              <Input type="email" className="h-10 bg-cyan-700 rounded-full"{...field} />
+              <Input type="email" className="shad-input rounded-full"{...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
@@ -133,14 +131,14 @@ async function onSubmit(values: z.infer<typeof SignUpValidation>) {
           <FormItem>
             <FormLabel>Password</FormLabel>
             <FormControl>
-              <Input type="password" className="h-10 rounded-full bg-cyan-700"{...field} />
+              <Input type="password" className="shad-input rounded-full"{...field} />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
       <Button type="submit"
-      className="rounded-full bg-cyan-600">
+      className="shad-button_primary">
         SignUp
       </Button>
       <p className="text-small-regular text-light-3 text-center mt-2">

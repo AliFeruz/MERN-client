@@ -1,29 +1,22 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AuthLayout from "./_auth/AuthLayout";
-import SignInForm from "./_auth/forms/SignInForm";
-import SignUpForm from "./_auth/forms/SignUpForm";
-import HomePage from "./_root/HomePage";
-import ProfilePage from "./_root/ProfilePage";
-
-
+import { Route, Routes } from "react-router-dom";
+import SignInFrom from "./pages/_auth/SignInFrom";
+import SignUpForm from "./pages/_auth/SignUpForm";
+import HomePage from "./pages/_root/HomePage";
+import ProfilePage from "./pages/_root/ProfilePage";
+import { Toaster } from "./components/ui/toaster";
 
 function App() {
-  
+
 
   return (
-    <main className="flex h-screen">
-    <BrowserRouter>
-    <Routes>
-      <Route element={<AuthLayout/>}>
-      <Route path="/sign-in" element={<SignInForm/>}/>
-      <Route path="/sing-up" element={<SignUpForm/>}/>
-      </Route>
-      <Route>
-      <Route path="/" element={<HomePage/>}/>
-      <Route path="/profile/:userId" element={<ProfilePage/>}/>
-      </Route>
-    </Routes>
-    </BrowserRouter>
+    <main className="flex h-scren">
+      <Routes>
+        <Route path="/sign-in" element={<SignInFrom/>}/>
+        <Route path="/sign-up" element={<SignUpForm/>}/>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/profile/:id" element={<ProfilePage/>}/>
+      </Routes>
+      <Toaster/>
     </main>
   )
 }

@@ -45,7 +45,5 @@ export type INavLink = {
     lastName: string;
     email: string;
     password: string;
-    location: string;
-    picture: string;
+    location: string
   };
- 
